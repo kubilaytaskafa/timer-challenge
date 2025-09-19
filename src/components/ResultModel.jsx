@@ -1,4 +1,5 @@
 import React, { forwardRef, useImperativeHandle, useRef } from "react";
+import { createPortal } from "react-dom";
 
 const ResultModel = forwardRef(function ResultModel(
   { targetTime, remainingTime, onReset },
@@ -16,7 +17,7 @@ const ResultModel = forwardRef(function ResultModel(
     };
   });
 
-  return (
+  return createPortal(
     <dialog
       ref={dialogRef}
       className="
@@ -58,7 +59,8 @@ const ResultModel = forwardRef(function ResultModel(
           Kapat
         </button>
       </form>
-    </dialog>
+    </dialog>,
+    document.getElementById("dialog")
   );
 });
 

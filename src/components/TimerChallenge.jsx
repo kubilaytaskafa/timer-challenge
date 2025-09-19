@@ -34,7 +34,7 @@ const TimerChallenge = ({ targetTime, title, desc }) => {
         onReset={handleReset}
       />
 
-      <article className="flex items-center flex-col justify-center gap-4 p-4 text-emerald-600 lg:w-1/3 w-full text-center border border-emerald-600 shadow-md shadow-emerald-600 ">
+      <article className="flex items-center flex-col justify-center gap-4 p-4 text-emerald-600 lg:w-1/3 h-72 w-full text-center border border-emerald-600 shadow-md shadow-emerald-600 ">
         <h3 className="text-2xl font-bold">Zorluk Seviyesi: {title}</h3>
         <p className="font-semibold text-sm ">
           Hedeflenen süre : <strong>{targetTime}</strong>{" "}
